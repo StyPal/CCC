@@ -18,7 +18,7 @@ class FileHandler(fileName: String?) {
         fileString = wholeFile.toString()
     }
 
-    fun getFileString(): String{
-        return fileString
+    fun getFileString(): List<String> {
+        return fileString.split("\n");
     }
 }
