@@ -15,7 +15,7 @@ class FileHandler(fileName: String?) {
         }
         val wholeFile = StringBuilder()
         try {
-            for (line in "./input/$name".let { Paths.get(it) }.let { Files.readAllLines(it, StandardCharsets.ISO_8859_1) }) {
+            for (line in "input/$name.in".let { Paths.get(it) }.let { Files.readAllLines(it, StandardCharsets.ISO_8859_1) }) {
                 wholeFile.append(line).append("\n")
             }
         } catch (iox: IOException) {
@@ -29,17 +29,17 @@ class FileHandler(fileName: String?) {
         return fileString.split("\n");
     }
 
-    fun writeFile() {
+    fun write() {
         val temp = builder.toString()
         try {
-            val fw = FileWriter("./output/$name")
+            val fw = FileWriter("./output/$name.out")
             fw.write(temp)
             fw.close()
         } catch (ignored: IOException) {
         }
     }
 
-    fun appendToStringBuilder(c: String) {
+    fun append(c: String) {
         builder.append(c)
     }
 }
