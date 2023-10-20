@@ -6,7 +6,7 @@ public class CccOct23 {
     }
 
     private static void level1(){
-
+        file = new FileHandler("level1/level1_example");
     }
 
 }
