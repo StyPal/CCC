@@ -15,7 +15,7 @@ class FileHandler(fileName: String?) {
         }
         val wholeFile = StringBuilder()
         try {
-            for (line in "input/$name.in".let { Paths.get(it) }.let { Files.readAllLines(it, StandardCharsets.ISO_8859_1) }) {
+            for (line in "input_march_23/level2/$name.in".let { Paths.get(it) }.let { Files.readAllLines(it, StandardCharsets.ISO_8859_1) }) {
                 wholeFile.append(line).append("\n")
             }
         } catch (iox: IOException) {

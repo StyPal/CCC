@@ -1,11 +1,11 @@
 import java.util.Arrays;
 import java.util.Objects;
 
-public class CCC {
+public class CccMar23 {
     static FileHandler file;
 
     public static void main(String[] args) {
-
+        level2();
     }
 
     private static void level3() {
@@ -205,7 +205,7 @@ public class CCC {
     }
 
     private static void level1() {
-        file = new FileHandler("level1_5");
+        file = new FileHandler("level1_1");
         int count = 0;
         for (String line : file.getList()) {
             for (int i = 0; i < line.length(); i++) {
